@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="FileRacks.UI.View.BatchManagerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FileRacks.UI.View">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Text="Batch" FontWeight="Bold"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Profile"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Destination"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Batch Number"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Number Of Pages"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Application"/>
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Filerack Cabinet"/>
+        <TextBlock Grid.Row="7" Grid.Column="0" Text="Page Per Document"/>
+        <TextBlock Grid.Row="8" Grid.Column="0" Text="Email To"/>
+
+        <ComboBox Grid.Row="1" Grid.Column="1" />
+        <ComboBox Grid.Row="2" Grid.Column="1" />
+        <TextBox Grid.Row="3" Grid.Column="1" />
+        <TextBox Grid.Row="4" Grid.Column="1" />
+        <ComboBox Grid.Row="5" Grid.Column="1" />
+        <ComboBox Grid.Row="6" Grid.Column="1" />
+        <ComboBox Grid.Row="7" Grid.Column="1" />
+        <ComboBox Grid.Row="8" Grid.Column="1" />
+
+
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileRacks.UI", "UI\FileRacks.UI.csproj", "{5D05B8AC-3879-4D6E-BA80-542F84564964}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{A80B1C5D-223B-4688-BCE7-319F8DBD8C55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{27170EA0-43E8-42D2-86C4-7268893604D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D05B8AC-3879-4D6E-BA80-542F84564964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D05B8AC-3879-4D6E-BA80-542F84564964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D05B8AC-3879-4D6E-BA80-542F84564964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D05B8AC-3879-4D6E-BA80-542F84564964}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A80B1C5D-223B-4688-BCE7-319F8DBD8C55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A80B1C5D-223B-4688-BCE7-319F8DBD8C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A80B1C5D-223B-4688-BCE7-319F8DBD8C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A80B1C5D-223B-4688-BCE7-319F8DBD8C55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27170EA0-43E8-42D2-86C4-7268893604D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27170EA0-43E8-42D2-86C4-7268893604D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27170EA0-43E8-42D2-86C4-7268893604D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27170EA0-43E8-42D2-86C4-7268893604D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

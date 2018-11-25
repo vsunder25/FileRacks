@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:res="clr-namespace:FileRacks.Resources;assembly=FileRacks.Resources"
+                    xmlns:local="clr-namespace:FileRacks.UI.Styles">
+
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource ControlStyle}">
+        <Style.Setters>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="OverridesDefaultStyle" Value="False" />
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="FontWeight" Value="Black"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="MinHeight" Value="{x:Static res:Constants.ButtonMinHeight}" />
+            <Setter Property="MinWidth" Value="{x:Static res:Constants.StandardColumnWidth}" />
+        </Style.Setters>
+    </Style>
+
+    <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource ControlStyle}">
+        <Style.Setters>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="OverridesDefaultStyle" Value="False" />
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="FontWeight" Value="Black"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="MinWidth" Value="{x:Static res:Constants.StandardColumnWidth}" />
+        </Style.Setters>
+    </Style>
+
+</ResourceDictionary>
