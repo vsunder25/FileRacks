@@ -10,10 +10,9 @@
     <UserControl.DataContext>
         <vm:ProfileVM/>
     </UserControl.DataContext>
-    <UserControl.Resources>
-        
-        <scan:ProfileDetailsView x:Key="ProfileDetailsView"/>
 
+    <UserControl.Resources>
+        <scan:ProfileDetailsView x:Key="ProfileDetailsView"/>
         <Style TargetType="ListViewItem">
             <Style.Triggers>
                 <Trigger Property="ItemsControl.AlternationIndex"  Value="0">
@@ -25,76 +24,81 @@
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
-    <Grid  
-            MinHeight="{x:Static res:Constants.LargeColumnWidth}"
-          MinWidth="{x:Static res:Constants.LargeColumnWidth}"
-        HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.3*"/>
-            <ColumnDefinition Width="0.5*"/>
-            <ColumnDefinition Width="0.2*"/>
-        </Grid.ColumnDefinitions>
+
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.02*"/>
+            <RowDefinition Height="0.96*"/>
+            <RowDefinition Height="0.02*"/>
         </Grid.RowDefinitions>
-       
-        <StackPanel Grid.Column="1" Background="Transparent"
-                    MinWidth="{x:Static res:Constants.WideColumnWidth}">
-            <Border Margin="5" Grid.RowSpan="2" CornerRadius="20" BorderBrush="Black" BorderThickness="2">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="20"/>
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="1" >
-                        <Border CornerRadius="20">
-                        <ContentControl x:Name="profileDetail" Content="{StaticResource ProfileDetailsView}"/>
-                        </Border>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.02*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.02*"/>
+            <ColumnDefinition Width="0.76*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" CornerRadius="5" BorderBrush="Black" BorderThickness="2">
+                <ScrollViewer Grid.Row="0" CanContentScroll="True" HorizontalScrollBarVisibility="Hidden"
+                          VerticalScrollBarVisibility="Auto">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="Select a profie to edit" 
+                               TextAlignment="Center"
+                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                        <ListView Grid.Row="1" AlternationCount="2">
+                            <ListView.Template>
+                                <ControlTemplate>
+                                    <Border CornerRadius="5">
+                                        <ItemsPresenter>
+                                        </ItemsPresenter>
+                                    </Border>
+                                </ControlTemplate>
+                            </ListView.Template>
+                            <ListViewItem Content="Harish"/>
+                            <ListViewItem Content="Harish"/>
+                            <ListViewItem Content="Harish"/>
+                            <ListViewItem Content="Harish"/>
+                        </ListView>
                     </Grid>
-                </Grid>
+                </ScrollViewer>
             </Border>
-            <WrapPanel Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button Content="Cancel" Width="120" Margin="0,2,5,0" />
-                <Button Content="Save" Width="120" Margin="0,2,5,0" />
-            </WrapPanel>
-        </StackPanel>
 
-        <StackPanel Grid.Column="0" Background="Transparent" 
-                    MinWidth="{x:Static res:Constants.WideColumnWidth}"
-                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Border Margin="5" Grid.RowSpan="2" CornerRadius="20" BorderBrush="Black" BorderThickness="2">
-
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="Select a profie to edit"/>
-                    <ListView Grid.Row="1" Height="{Binding ElementName=profileDetail, Path=ActualHeight}"
-                              AlternationCount="2">
-                        <ListView.Template>
-                            <ControlTemplate>
-                                <Border CornerRadius="20">
-                                    <ItemsPresenter>
-                                    </ItemsPresenter>
-                                </Border>
-                            </ControlTemplate>
-                        </ListView.Template>
-                        <ListViewItem Content="Harish"/>
-                        <ListViewItem Content="Harish"/>
-                        <ListViewItem Content="Harish"/>
-                        <ListViewItem Content="Harish"/>
-                    </ListView>
-
-                </Grid>
-            </Border>
-            <WrapPanel Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <WrapPanel Grid.Row="1" Margin="5,25,5,0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Button Content="Remove" Width="120"  Margin="0,2,5,0" />
                 <Button Content="Add" Width="120" Margin="0,2,5,0" />
             </WrapPanel>
-        </StackPanel>
+        </Grid>
 
-        
+        <Grid Grid.Row="1" Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" CornerRadius="5" BorderThickness="2" BorderBrush="Black" >
+                <ScrollViewer Grid.Row="0" CanContentScroll="True" HorizontalScrollBarVisibility="Hidden"
+                          VerticalScrollBarVisibility="Auto">
+                    <ContentControl x:Name="profileDetail" Content="{StaticResource ProfileDetailsView}"/>
+                </ScrollViewer>
+            </Border>
+
+
+            <WrapPanel Grid.Row="1" Margin="5,25,5,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Content="Cancel" Width="120" Margin="0,2,5,0" />
+                <Button Content="Save" Width="120" Margin="0,2,5,0" />
+            </WrapPanel>
+        </Grid>
+
     </Grid>
 </UserControl>
